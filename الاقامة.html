@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاقامة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f4fdf4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32, #5cb85c);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4caf50;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .accommodation-gallery {/*تنسيق معرض الإقامة */
+            display: grid;/*استخدام تخطيط الشبكة (grid)*/
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));/*أعمدة الشبكة */
+            gap: 20px;/*فراغ بين العناصر في الشبكة*/
+            padding: 20px;/*تباعد داخلي للمعرض*/
+        }
+
+        .accommodation-card {/*تنسيق بطاقة الإقامة*/
+            background: white;/*لون خلفية البطاقة */
+            border-radius: 15px;/*زوايا دائرية للبطاقة*/
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/*ظل البطاقة*/
+            overflow: hidden;/*إخفاء المحتوى الذي يتجاوز الحدود */
+            transition: transform 0.3s;/*تأثير انتقال عند تغيير الحجم*/
+            text-align: center;/* محاذاة النص في المنتصف داخل البطاقة*/
+            padding-bottom: 10px;/*تباعد داخلي أسفل البطاقة*/
+        }
+
+        .accommodation-card img {/*تنسيق صورة البطاقة*/
+            width: 100%;/*عرض الصورة كامل داخل البطاقة*/
+            border-bottom: 3px solid #4caf50;/*حدود سفلية للصورة بلون مخصص*/
+        }
+
+        .accommodation-card:hover {/*تأثير عند تمرير الفأرة فوق البطاقة*/
+            transform: scale(1.05);/*تكبير البطاقة قليلاً */
+        }
+
+        .accommodation-card h3 {/*تنسيق عنوان البطاقة*/
+            margin: 10px 0;/*تباعد حول عنوان البطاقة */
+            font-size: 18px;/*حجم خط العنوان*/
+            color: #2e7d32;/*لون العنوان*/
+        }
+
+        footer {/*تنسيق التذييل */
+            background-color: #2e7d32;/*لون خلفية التذييل*/
+            color: white;/*لون النص في التذييل*/
+            text-align: center;/*محاذاة النص في المنتصف*/
+            padding: 20px;/*تباعد داخلي للتذييل*/
+            margin-top: 20px; /* تباعد علوي للتذييل */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>منتجع جولف الملكي</h1><!-- عنوان الصفحة الرئيسية -->
+    </header>
+
+    <nav>
+        <a href="الصفحة الرئيسيه.html">الصفحة الرئيسية</a><!-- رابط للصفحة الرئيسية -->
+        <a href="من نحن.html">من نحن</a><!-- رابط لصفحة "من نحن" -->
+        <a href="ملاعب الجولف .html">ملاعب الجولف</a><!-- رابط لصفحة ملاعب الجولف -->
+        <a href="الخدمات.html">الخدمات</a><!-- رابط لصفحة الخدمات -->
+        <a href="الاقامة.html">الإقامة</a><!-- رابط لصفحة الإقامة -->
+        <a href="المعرض.html">المعرض</a><!-- رابط لصفحة المعرض -->
+        <a href="الحجز ولاستفسارات.html">الحجز والاستفسارات</a><!-- رابط لصفحة الحجز والاستفسارات -->
+        <a href="اتصل بنا.html">اتصل بنا</a><!-- رابط لصفحة "اتصل بنا" -->
+    </nav>
+
+    <div class="container">
+        <h2>تجربة إقامة فاخرة</h2><!-- عنوان فرعي يقدم فكرة عامة -->
+        <div class="accommodation-gallery"> <!-- بداية معرض الإقامة -->
+            <div class="accommodation-card"><!-- بطاقة سكن -->
+                <h3>غرف سوبر ديلوكس</h3> <!-- عنوان البطاقة لـ "غرف سوبر ديلوكس" -->
+                <img src="غرف ديلوكس2.png" alt="غرف سوبر ديلوكس "><!-- صورة البطاقة مع وصف بديل -->
+            </div>
+            <div class="accommodation-card"><!-- بطاقة سكن -->
+                <h3>الأجنحة الفخمة</h3><!-- عنوان البطاقة لـ "الأجنحة الفخمة" -->
+                <img src="اجنحة فاخرة.png" alt="الأجنحة الفخمة"><!-- صورة البطاقة مع وصف بديل -->
+            </div>
+            <div class="accommodation-card"><!-- بطاقة سكن -->
+                <h3>فلل خاصة</h3><!-- عنوان البطاقة لـ "فلل خاصة" -->
+                <img src="فلل خاصة.png" alt="فلل خاصة"><!-- صورة البطاقة مع وصف بديل -->
+            </div>
+            <div class="accommodation-card"><!-- بطاقة سكن -->
+                <h3>خدمات متميزة</h3><!-- عنوان البطاقة لـ "خدمات متميزة" -->
+                <img src="خدمات متميزةة.png" alt="خدمات متميزة"><!-- صورة البطاقة مع وصف بديل -->
+            </div>
+        </div><!-- نهاية معرض الإقامة -->
+    </div>
+
+    <footer>
+        <p>مرحبًا بكم في منتجع الجولف الملكي - حيث تلتقي الرياضة والفخامة</p><!-- نص التذييل -->
+    </footer>
+    <style>
+        /* التصميم العام */
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 16px; /* تعيين حجم افتراضي للخط */
+        }
+        .accessibility-controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 10px;
+        }
+        .accessibility-controls button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: white; /* خلفية بيضاء */
+            color: green; /* لون الخط أخضر */
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%; /* جعل الأزرار دائرية */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .accessibility-controls button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="accessibility-controls">
+        <button onclick="changeFontSize(2)">+</button>
+        <button onclick="changeFontSize(-2)">-</button>
+    </div>
+
+    <script>
+        function changeFontSize(change) {
+            let body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + change) + 'px';
+        }
+    </script>
+
+</body>
+</body>
+</html>

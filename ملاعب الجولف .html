@@ -1,0 +1,173 @@
+<!DOCTYPE html><!-- تعريف مستند HTML -->
+<html lang="ar" dir="rtl"><!-- تحديد لغة المستند (العربية) واتجاه النص (من اليمين إلى اليسار) -->
+<head>
+    <meta charset="UTF-8"><!-- تعيين مجموعة أحرف المستند -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- تعيين إعدادات عرض للمستعرض -->
+    <title>ملاجب الجولف</title><!-- عنوان المستند الذي يظهر في شريط العنوان -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"><!-- ربط خط Tahawal من Google Fonts -->
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;/* تعيين نوع الخط لجسم الصفحة */
+            background-color: #f4fdf4; /* لون خلفية أخضر فاتح */
+            margin: 0;/* إزالة الهوامش */
+            padding: 0;/* إزالة الحشو */
+            color: #333;/* تعيين لون النص */
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32, #5cb85c); /* تدرجات من الأخضر */
+            color: white;/* لون النص في الهيدر */
+            padding: 60px 20px; /* تعيين الحشو للهادر */
+            text-align: center;/* محاذاة النص إلى الوسط */
+        }
+
+        nav {
+            background-color: #4caf50; /* لون أخضر لخلفية شريط التنقل */
+            padding: 15px 0;/* تعيين الحشو لشريط التنقل */
+            text-align: center;/* محاذاة النص في شريط التنقل إلى الوسط */
+        }
+
+        nav ul {
+            list-style: none;/* إزالة العلامات من القائمة */
+            padding: 0;/* إزالة الحشو من القائمة */
+            margin: 0;/* إزالة الهوامش من القائمة */
+            display: flex;/* استخدام المرونة في عرض العناصر */
+            justify-content: center;/* محاذاة العناصر إلى الوسط */
+        }
+
+        nav li {
+            margin: 0 15px; /* تعيين هوامش بين عناصر القائمة */
+        }
+
+        nav a {
+            color: white;/* تعيين لون النص في الروابط */
+            text-decoration: none;/* إزالة خط تحت النص */
+            font-size: 18px; /* تعيين حجم خط الروابط */
+            padding: 10px 15px;/* تعيين الحشو للروابط */
+            border-radius: 5px;/* إضافة زوايا مدورة للروابط */
+
+            transition: background-color 0.3s ease;/* إضافة تأثير على الخلفية عند التغيير */
+        }
+
+        nav a:hover {
+            background-color: #45a049; /* تغيير لون الخلفية عند التمرير فوق الرابط */
+        }
+
+        .container {
+            padding: 60px 20px;/* تعيين الحشو للحاوية */
+            text-align: center;/* محاذاة النص في الحاوية إلى الوسط */
+        }
+
+        footer {
+            background-color: #2e7d32; /* خلفية بلون أخضر داكن للتذييل */
+            color: white;/* لون النص في التذييل */
+            text-align: center; /* محاذاة النص في التذييل إلى الوسط */
+            padding: 20px;/* تعيين الحشو للتذييل */
+        }
+        
+        .image-gallery {
+            display: flex;/* استخدام المرونة في عرض محتويات المعرض */
+            flex-wrap: wrap; /* السماح للعناصر بالتفاف */
+            justify-content: center;/* محاذاة العناصر إلى الوسط */
+            margin-top: 20px;/* إضافة مساحة فوق المعرض */
+        }
+
+        .image-gallery img {
+            margin: 10px;/* إضافة هوامش حول الصور */
+            border-radius: 10px; /* إضافة زوايا مدورة للصور */
+            max-width: 300px; /* تعيين العرض الأقصى للصورة */
+            height: auto; /* المحافظة على نسبة العرض إلى الارتفاع */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>منتجع جولف الملكي</h1><!-- عنوان الصفحة الرئيسي -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="الصفحة الرئيسيه.html">الصفحة الرئيسية</a></li><!-- رابط للصفحة الرئيسية -->
+            <li><a href="من نحن.html">من نحن</a></li><!-- رابط لصفحة من نحن -->
+            <li><a href="ملاعب الجولف .html">ملاعب الجولف</a></li><!-- رابط لصفحة ملاعب الجولف -->
+            <li><a href="الخدمات.html">الخدمات</a></li><!-- رابط لصفحة الخدمات -->
+            <li><a href="الاقامة.html">الإقامة</a></li><!-- رابط لصفحة الإقامة -->
+            <li><a href="المعرض.html">المعرض</a></li><!-- رابط لصفحة المعرض -->
+            <li><a href="الحجز ولاستفسارات.html">الحجز والاستفسارات</a></li><!-- رابط لصفحة الحجز والاستفسارات -->
+            <li><a href="اتصل بنا.html">اتصل بنا</a></li><!-- رابط لصفحة اتصل بنا -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>استمتع بأفضل ملاعب الجولف</h2><!-- عنوان فرعي -->
+        <p>تقدم مجموعة من الملاعب ذات التصميم العالمي والتي تناسب جميع مستويات اللاعبين. سواء كنت مبتدئًا أو محترفًا، ستجد ملعبًا يلبي احتياجاتك تمامًا. تم تصميم الملاعب لتوفير تجربة فريدة وممتعة لجميع اللاعبين. انضم إلينا الآن للاستمتاع بأجواء الجولف المثالية وسط الطبيعة الخلابة.</p><!-- وصف قصير عن الملاعب -->
+        
+        <section>
+            <div class="photo">
+                <img src="ملاعب الجولف 1.png" alt="جولف"> <!-- صورة من الملاعب مع نص بديل -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>مرحبًا بكم في منتجع الجولف الملكي - حيث تلتقي الرياضة والفخامة</p><!-- نص التذييل -->
+    </footer>
+    <style>
+        /* التصميم العام */
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 16px; /* تعيين حجم افتراضي للخط */
+        }
+        .accessibility-controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 10px;
+        }
+        .accessibility-controls button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: white; /* خلفية بيضاء */
+            color: green; /* لون الخط أخضر */
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%; /* جعل الأزرار دائرية */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .accessibility-controls button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="accessibility-controls">
+        <button onclick="changeFontSize(2)">+</button>
+        <button onclick="changeFontSize(-2)">-</button>
+    </div>
+
+    <script>
+        function changeFontSize(change) {
+            let body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + change) + 'px';
+        }
+    </script>
+
+</body>
+</body>
+</html>

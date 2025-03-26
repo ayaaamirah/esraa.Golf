@@ -1,0 +1,200 @@
+<!DOCTYPE html><!-- تعريف نوع المستند كـ HTML -->
+<html lang="ar" dir="rtl"><!-- بدء وثيقة HTML مع تعيين اللغة للعربية و اتجاه الكتابة من اليمين لليسار -->
+<head>
+    <meta charset="UTF-8"><!-- تحديد مجموعة الأحرف المستخدمة في الصفحة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- تحديد عرض الصفحة للتوافق مع الأجهزة المحمولة -->
+    <title>الخدمات</title><!-- عنوان الصفحة يظهر في شريط العنوان للمتصفح -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"><!-- ربط خط خارجي من Google Fonts -->
+    <style>
+        body {/*-- بداية تنسيق الجسم */
+            font-family: 'Tajawal', sans-serif;/*تعيين خط 'Tajawal' كخط أساسي للجسم */
+            background-color: #f4fdf4;/*تعيين لون خلفية خفيف للجسم*/
+            margin: 0;/*إزالة الهامش الافتراضي*/
+            padding: 0;/*إزالة Padding الافتراضي*/
+            color: #333;/*تعيين لون النص الأساسي */
+        }
+
+        header {/* بداية تنسيق الرأس */
+            background: linear-gradient(135deg, #2e7d32, #5cb85c);/*تعيين خلفية متدرجة*/
+            color: white;/*تعيين لون النص في الرأس إلى الأبيض*/
+            padding: 40px 20px;/*تعيين Padding للرأس */
+            text-align: center;/*محاذاة النص إلى الوسط*/
+            font-size: 24px;/*تعيين حجم خط الرأس*/
+        }
+
+        nav {/*بداية تنسيق شريط التنقل*/
+            background-color: #4caf50;/*تعيين لون خلفية شريط التنقل */
+            padding: 10px 0;/*تعيين Padding لشريط التنقل */
+            text-align: center;/*محاذاة النص في شريط التنقل إلى الوسط*/
+        }
+
+        nav ul {/*بداية تنسيق قائمة التنقل*/
+            list-style: none;/*إزالة النقاط من قائمة العناصر */
+            padding: 0;/*إزالة Padding من القائمة*/
+            margin: 0;/*إزالة Margin من القائمة*/
+            display: flex;/*تعيين قائمة التنقل لتكون مرنة*/
+            justify-content: center;/*محاذاة العناصر داخل القائمة إلى الوسط*/
+        }
+
+        nav li {/*بداية تنسيق عناصر القائمة*/
+            margin: 0 15px;/*تعيين الهوامش اليمنى واليسرى لعناصر القائمة */
+        }
+
+        nav a {/*بداية تنسيق الروابط في قائمة التنقل*/
+            color: white;/*تعيين لون نص الروابط إلى الأبيض*/
+            text-decoration: none;/*إزالة التسطير من الروابط*/
+            font-size: 18px;/*تعيين حجم خط الروابط*/
+            padding: 10px 15px;/*تعيين Padding حول الروابط*/
+            border-radius: 5px;/*تعيين زوايا دائرية للروابط*/
+            transition: background-color 0.3s ease;/*إضافة تأثير انتقال سلس عند تغيير لون الخلفية*/
+        }
+
+        nav a:hover {/*تأثير عندما يتم المرور بالفأرة فوق الرابط*/
+            background-color: #45a049;/*تعيين لون خلفية مختلف عند المرور فوق الرابط*/
+        }
+
+        .container {/*بداية تنسيق الحاوية*/
+            padding: 40px 20px;/*تعيين Padding للحاوية */
+            text-align: center;/*محاذاة النص في الحاوية إلى الوسط*/
+        }
+
+        .gallery {/*بداية تنسيق المعرض*/
+            display: flex;/*تعيين المعرض ليكون مرنًا*/
+            flex-wrap: wrap;/*السماح لتغليف العناصر عند الحاجة*/
+            justify-content: center;/*محاذاة العناصر في المعرض إلى الوسط*/
+            gap: 20px;/*تعيين المسافة بين العناص*/
+            margin-top: 20px;/*تعيين مساحة فارغة أعلى المعرض*/
+        }
+
+        .gallery-item {/*داية تنسيق عنصر المعرض*/
+            background: white;/*تعيين لون خلفية العنصر إلى الأبيض */
+            padding: 20px;/*تعيين Padding داخل العنصر*/
+            border-radius: 10px;/*تعيين زوايا دائرية للعنصر*/
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);/*تعيين ظل للعنصر*/
+            max-width: 300px;/*تعيين حد أقصى لعرض العنصر*/
+            text-align: center;/*محاذاة النص داخل العنصر إلى الوسط */
+        }
+
+        .gallery-item img {/*بداية تنسيق الصور داخل عنصر المعرض*/
+            width: 100%;/*تعيين عرض الصورة ليكون 100% من العنصر*/
+            height: auto;/*تعيين ارتفاع الصورة بشكل تلقائي للحفاظ على النسبة*/
+            border-radius: 10px;/*تعيين زوايا دائرية للصورة*/
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);/*تعيين ظل للصورة*/
+            transition: transform 0.3s;/*إضافة تأثير انتقال سلس عند تغيير الشكل*/
+        }
+
+        .gallery-item img:hover {/* تأثير عندما يتم المرور بالفأرة فوق الصورة*/
+            transform: scale(1.05);/*تكبير الصورة قليلاً عند المرور فوقها */
+        }
+
+        footer {/*بداية تنسيق التذييل*/
+            background-color: #2e7d32;/*تعيين لون الخلفية للتذييل */
+            color: white;/*تعيين لون النص في التذييل إلى الأبيض */
+            text-align: center;/*محاذاة النص في التذييل إلى الوسط*/
+            padding: 20px;/*تعيين Padding للتذييل*/
+            margin-top: 20px;/*تعيين مساحة فارغة أعلى التذييل */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>منتجع جولف الملكي</h1><!-- عنوان الصفحة الرئيسي -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="الصفحة الرئيسيه.html">الصفحة الرئيسية</a></li><!-- رابط الصفحة الرئيسية -->
+            <li><a href="من نحن.html">من نحن</a></li><!-- رابط صفحة "من نحن" -->
+            <li><a href="ملاعب الجولف .html">ملاعب الجولف</a></li><!-- رابط صفحة ملاعب الجولف -->
+            <li><a href="الخدمات.html">الخدمات</a></li><!-- رابط صفحة الخدمات -->
+            <li><a href="الاقامة.html">الإقامة</a></li><!-- رابط صفحة الإقامة -->
+            <li><a href="المعرض.html">المعرض</a></li><!-- رابط صفحة المعرض -->
+            <li><a href="الحجز ولاستفسارات.html">الحجز والاستفسارات</a></li><!-- رابط صفحة الحجز والاستفسارات -->
+            <li><a href="اتصل بنا.html">اتصل بنا</a></li><!-- رابط صفحة "اتصل بنا" -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>اكتشف سحر منتجعنا من خلال خدماتنا</h2><!-- عنوان قسم الخدمات -->
+        <div class="gallery"><!-- بدء قسم المعرض -->
+            <div class="gallery-item"><!-- بداية عنصر معرض الخدمات الاحترافية -->
+                <h3>خدمات الجولف الاحترافية</h3><!-- عنوان الخدمات الاحترافية -->
+                <img src="خدمات جولف الاحترافية.png2.png" alt="خدمات الجولف الاحترافية"><!-- صورة الخدمات الاحترافية -->
+            </div><!-- بداية عنصر درس تدريب خاص -->
+            <div class="gallery-item">
+                <h3>دروس تدريب خاصة</h3><!-- عنوان درس التدريب الخاص -->
+                <img src="دروس تدريب خاصة.png" alt="دروس تدريب خاصة"><!-- صورة درس التدريب الخاص -->
+            </div>
+            <div class="gallery-item"> <!-- بداية عنصر خدمات العناية بالسبا -->
+                <h3>خدمات العناية بالسبا</h3><!-- عنوان خدمات العناية بالسبا -->
+                <img src="العناية بالسبا.png" alt="خدمات العناية بالسبا"><!-- صورة خدمات العناية بالسبا -->
+            </div>
+            <div class="gallery-item"><!-- بدء عنصر أنشطة ترفيهية متنوعة -->
+                <h3>أنشطة ترفيهية متنوعة</h3><!-- عنوان الأنشطة الترفيهية -->
+                <img src="انشطة ترفيهية متنوعة.png" alt="أنشطة ترفيهية متنوعة"><!-- صورة الأنشطة الترفيهية -->
+            </div>
+        </div><!-- نهاية المعرض -->
+    </div>
+
+    <footer>
+        <p>مرحبًا بكم في منتجع الجولف الملكي - حيث تلتقي الرياضة والفخامة</p><!-- رسالة ترحيبية في التذييل -->
+    </footer>
+    <style>
+        /* التصميم العام */
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 16px; /* تعيين حجم افتراضي للخط */
+        }
+        .accessibility-controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 10px;
+        }
+        .accessibility-controls button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: white; /* خلفية بيضاء */
+            color: green; /* لون الخط أخضر */
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%; /* جعل الأزرار دائرية */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .accessibility-controls button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="accessibility-controls">
+        <button onclick="changeFontSize(2)">+</button>
+        <button onclick="changeFontSize(-2)">-</button>
+    </div>
+
+    <script>
+        function changeFontSize(change) {
+            let body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + change) + 'px';
+        }
+    </script>
+
+</body>
+</body>
+</html>

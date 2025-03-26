@@ -1,0 +1,219 @@
+<!DOCTYPE html> <!-- تحديد نوع مستند HTML -->
+<html lang="ar" dir="rtl"> <!-- تعيين اللغة إلى العربية واتجاه الصفحة من اليمين إلى اليسار -->
+<head>
+    <meta charset="UTF-8"> <!-- تحديد ترميز الحروف ليكون UTF-8 لدعم العربية -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- جعل الصفحة متجاوبة مع جميع الأجهزة -->
+    <title>الحجز والاستفسارات</title> <!-- عنوان الصفحة -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"> <!-- استيراد خط Tajawal من Google Fonts -->
+    <style>
+        /* أنماط التصميم للصفحة */
+        body {
+            font-family: 'Tajawal', sans-serif; /* تعيين الخط المستخدم */
+            background-color: #f4fdf4; /* لون الخلفية */
+            margin: 0;
+            padding: 0;
+            color: #333; /* لون النص الأساسي */
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32, #5cb85c); /* تدرج لوني للخلفية */
+            color: white; /* لون النص */
+            padding: 60px 20px; /* التباعد الداخلي */
+            text-align: center; /* محاذاة النص للوسط */
+        }
+
+        nav {
+            background-color: #4caf50; /* لون خلفية شريط التنقل */
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none; /* إزالة نقاط القائمة */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* محاذاة العناصر للوسط */
+            gap: 20px; /* المسافة بين العناصر */
+        }
+
+        nav li {
+            display: inline-block; /* جعل العناصر في صف واحد */
+        }
+
+        nav a {
+            color: white; /* لون النص */
+            text-decoration: none; /* إزالة التسطير */
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .container {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: right;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للصندوق */
+        }
+
+        input, select, textarea {
+            width: 100%; /* جعل الحقول بعرض كامل */
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc; /* لون حدود الحقول */
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* منع تجاوز العناصر للحدود */
+        }
+
+        button {
+            background-color: #2e7d32; /* لون زر الإرسال */
+            color: white;
+            border: none;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer; /* تغيير شكل المؤشر عند المرور على الزر */
+            width: 100%;
+            font-size: 18px;
+            transition: background 0.3s; /* تأثير عند تغيير اللون */
+        }
+
+        button:hover {
+            background-color: #1b5e20; /* تغيير لون الزر عند التمرير عليه */
+        }
+
+        .confirmation {
+            display: none; /* إخفاء رسالة التأكيد افتراضيًا */
+            margin-top: 20px;
+            color: green; /* لون الرسالة */
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2e7d32; /* لون خلفية التذييل */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>منتجع جولف الملكي</h1> <!-- عنوان الصفحة -->
+    </header>
+
+    <nav>
+        <ul>
+            <!-- قائمة التنقل بين الصفحات -->
+            <li><a href="الصفحة الرئيسيه.html">الصفحة الرئيسية</a></li>
+            <li><a href="من نحن.html">من نحن</a></li>
+            <li><a href="ملاعب الجولف .html">ملاعب الجولف</a></li>
+            <li><a href="الخدمات.html">الخدمات</a></li>
+            <li><a href="الاقامة.html">الإقامة</a></li>
+            <li><a href="المعرض.html">المعرض</a></li>
+            <li><a href="الحجز ولاستفسارات.html">الحجز والاستفسارات</a></li>
+            <li><a href="اتصل بنا.html">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2>قم بحجز جلسة أو استفسار الآن!</h2>
+        <p>إذا كان لديك أي استفسارات أو ترغب في حجز جلسة معنا، يرجى ملء النموذج أدناه:</p>
+        
+        <form id="bookingForm"> <!-- نموذج الحجز -->
+            <input type="text" name="name" placeholder="اسمك" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+            <label for="start-date">تاريخ الوصول:</label>
+            <input type="date" name="start-date" id="start-date" required>
+            <label for="end-date">تاريخ المغادرة:</label>
+            <input type="date" name="end-date" id="end-date" required>
+            <select name="service" required>
+                <option value="">اختر الخدمة</option>
+                <option value="golf_lesson">درس جولف</option>
+                <option value="event_booking">حجز فعالية</option>
+                <option value="other">استفسار آخر</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="الرسالة أو الاستفسار" required></textarea>
+            <button type="submit">إرسال</button>
+            <p class="confirmation" id="confirmationMessage">تم إرسال حجزك بنجاح! سنوافيك بالرد قريبًا.</p>
+        </form>
+    </div>
+    <footer>
+        <p>مرحبًا بكم في منتجع الجولف الملكي - حيث تلتقي الرياضة والفخامة</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); /* منع إعادة تحميل الصفحة عند الإرسال */
+            document.getElementById('confirmationMessage').style.display = 'block'; /* عرض رسالة التأكيد */
+            this.reset(); /* إعادة تعيين الحقول */
+        });
+    </script>
+<style>
+    /* التصميم العام */
+    body {
+        font-family: 'Almarai', sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        font-size: 16px; /* تعيين حجم افتراضي للخط */
+    }
+    .accessibility-controls {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: flex;
+        gap: 10px;
+    }
+    .accessibility-controls button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: white; /* خلفية بيضاء */
+        color: green; /* لون الخط أخضر */
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 50%; /* جعل الأزرار دائرية */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .accessibility-controls button:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+
+<div class="accessibility-controls">
+    <button onclick="changeFontSize(2)">+</button>
+    <button onclick="changeFontSize(-2)">-</button>
+</div>
+
+<script>
+    function changeFontSize(change) {
+        let body = document.body;
+        let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+        body.style.fontSize = (currentSize + change) + 'px';
+    }
+</script>
+
+</body>
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+<!DOCTYPE html> <!-- تعريف نوع الوثيقة بأن هذه صفحة HTML -->
+<html lang="ar" dir="rtl"> <!-- تحديد لغة الصفحة كالعربية وتنظيم النص من اليمين إلى اليسار -->
+<head>
+    <meta charset="UTF-8"> <!-- تعريف مجموعة الأحرف كـ UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ضبط عرض الصفحة ليتناسب مع أجهزة الجوال -->
+    <title> المعرض</title> <!-- عنوان الصفحة يظهر في شريط المتصفح -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet"> <!-- ربط خط خارجي من Google Fonts -->
+    <style> 
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background-color: #f4fdf4; 
+            margin: 0; 
+            padding: 0; 
+            color: #333; 
+        }
+
+        header { 
+            background: linear-gradient(135deg, #2e7d32, #5cb85c); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        nav { 
+            background-color: #4caf50; 
+            padding: 15px 0; 
+            text-align: center; 
+        }
+
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-size: 18px; 
+        }
+
+        nav a:hover { 
+            text-decoration: underline; 
+        }
+
+        .container { 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        h2 { 
+            font-size: 28px; 
+            color: #2e7d32; 
+            margin-bottom: 20px; 
+        }
+
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 20px; 
+            padding: 20px; 
+        }
+
+        .gallery-card { 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            overflow: hidden; 
+            transition: transform 0.3s; 
+            text-align: center; 
+            padding-bottom: 10px; 
+        }
+
+        .gallery-card img { 
+            width: 100%; 
+            border-bottom: 3px solid #4caf50; 
+        }
+
+        .gallery-card:hover { 
+            transform: scale(1.05); 
+        }
+
+        .gallery-card h3 { 
+            margin: 10px 0; 
+            font-size: 18px; 
+            color: #2e7d32; 
+        }
+
+        footer { 
+            background-color: #2e7d32; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 20px; 
+        }
+    </style> 
+</head>
+<body>
+
+    <header> 
+        <h1>منتجع جولف الملكي</h1> 
+    </header> 
+
+    <nav> 
+        <a href="الصفحة الرئيسيه.html">الصفحة الرئيسية</a> 
+        <a href="من نحن.html">من نحن</a> 
+        <a href="ملاعب الجولف .html">ملاعب الجولف</a> 
+        <a href="الخدمات.html">الخدمات</a> 
+        <a href="الاقامة.html">الإقامة</a> 
+        <a href="المعرض.html">المعرض</a> 
+        <a href="الحجز ولاستفسارات.html">الحجز والاستفسارات</a> 
+        <a href="اتصل بنا.html">اتصل بنا</a> 
+    </nav> 
+
+    <div class="container"> 
+        <h2>اكتشف روعة منتجع الجولف</h2> 
+        <div class="gallery"> 
+            <div class="gallery-card"> 
+                <h3>أبرز العناصر</h3> 
+                <img src="ابرز العناصر.png" alt="أبرز العناصر"> 
+            </div> 
+            <div class="gallery-card"> 
+                <h3>أماكن الإقامة</h3> 
+                <img src="اماكن الاقامة.png" alt="أماكن الإقامة"> 
+            </div> 
+            <div class="gallery-card"> 
+                <h3>الرفاهية</h3> 
+                <img src="الرفاهية.png" alt="الرفاهية"> 
+            </div> 
+            <div class="gallery-card"> 
+                <h3>الطعام</h3> 
+                <img src="تناول الطعام.png" alt="الطعام"> 
+            </div> 
+        </div> 
+    </div> 
+
+    <footer> 
+        <p>مرحبًا بكم في منتجع الجولف الملكي - حيث تلتقي الرياضة والفخامة</p> 
+    </footer> 
+    <style>
+        /* التصميم العام */
+        body {
+            font-family: 'Almarai', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            font-size: 16px; /* تعيين حجم افتراضي للخط */
+        }
+        .accessibility-controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            gap: 10px;
+        }
+        .accessibility-controls button {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: white; /* خلفية بيضاء */
+            color: green; /* لون الخط أخضر */
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50%; /* جعل الأزرار دائرية */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .accessibility-controls button:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="accessibility-controls">
+        <button onclick="changeFontSize(2)">+</button>
+        <button onclick="changeFontSize(-2)">-</button>
+    </div>
+
+    <script>
+        function changeFontSize(change) {
+            let body = document.body;
+            let currentSize = parseFloat(window.getComputedStyle(body).fontSize);
+            body.style.fontSize = (currentSize + change) + 'px';
+        }
+    </script>
+
+</body>
+</body> 
+</html>
+```
